@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Add_Appointment">
+    <children>
+        <Label layoutX="259.0" layoutY="14.0" prefHeight="42.0" prefWidth="174.0" text="Add Appointment">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <GridPane layoutX="60.0" layoutY="97.0" prefHeight="517.0" prefWidth="536.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="203.0" minWidth="10.0" prefWidth="136.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="196.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="199.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label contentDisplay="TOP" prefHeight="21.0" prefWidth="125.0" text="Appointment Title" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="31.0" prefWidth="128.0" text="Description" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="31.0" prefWidth="110.0" text="Location" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Contact_ID" GridPane.rowIndex="9">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="AppointmentTitleTxt" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="DescriptionTxt" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="LocationTxt" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label prefHeight="33.0" prefWidth="103.0" text="Appointment ID">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="AppointmentIDTxt" GridPane.columnIndex="1" />
+                <Label prefHeight="36.0" prefWidth="136.0" text="Start Date &amp; Time" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="34.0" prefWidth="156.0" text="End Date &amp; Time" GridPane.rowIndex="6">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="StartDateMenu" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <DatePicker fx:id="EndDateMenu" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label prefHeight="24.0" prefWidth="66.0" text="Type" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="TypeTxt" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label text="Customer ID" GridPane.rowIndex="7">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="User ID" GridPane.rowIndex="8" />
+                <TextField fx:id="StartDateTimeTxt" prefHeight="25.0" prefWidth="112.0" promptText="Time Format hh:mm" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <TextField fx:id="EndDateTimeTxt" promptText="Time Format hh:mm" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                <ComboBox fx:id="CustomerCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <ComboBox fx:id="UserCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <ComboBox fx:id="ContactCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <Label prefHeight="37.0" prefWidth="201.0" text="Time format HH:mm ex 8:00 = 08:00" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            </children>
+        </GridPane>
+        <Button layoutX="512.0" layoutY="649.0" mnemonicParsing="false" onAction="#SaveNewAppointment" text="Save" />
+        <Button layoutX="570.0" layoutY="649.0" mnemonicParsing="false" onAction="#CancelAddAppointment" text="Cancel" />
+    </children>
+</AnchorPane>

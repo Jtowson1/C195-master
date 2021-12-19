@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="668.0" prefWidth="917.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Main_Form">
+    <children>
+        <Pane layoutX="694.0" layoutY="408.0" prefHeight="240.0" prefWidth="243.0">
+            <children>
+                <Label layoutX="78.0" layoutY="5.0" prefHeight="27.0" prefWidth="110.0" text="Customers">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="78.0" layoutY="65.0" mnemonicParsing="false" onAction="#AddCustomer" text="Add Customer">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="78.0" layoutY="105.0" mnemonicParsing="false" onAction="#UpdateCustomer" text="Update Customer">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="78.0" layoutY="145.0" mnemonicParsing="false" onAction="#DeleteCustomer" text="Delete Customer">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+              <Button layoutX="104.0" layoutY="200.0" mnemonicParsing="false" onAction="#Logout" text="Logout">
+                  <font>
+                      <Font name="System Bold" size="12.0" />
+                  </font>
+              </Button>
+            </children>
+        </Pane>
+        <Pane layoutX="527.0" layoutY="408.0" prefHeight="240.0" prefWidth="243.0">
+            <children>
+                <Label layoutX="78.0" layoutY="5.0" prefHeight="27.0" prefWidth="131.0" text="Appointments">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button layoutX="78.0" layoutY="65.0" mnemonicParsing="false" onAction="#CreateAppointment" text="Add Appointment">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="78.0" layoutY="105.0" mnemonicParsing="false" onAction="#ModifyAppointment" text="Update Appointment" textFill="#212122">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button layoutX="78.0" layoutY="145.0" mnemonicParsing="false" onAction="#DeleteAppointment" text="Delete Appointment">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+            <Button fx:id="Reports" layoutX="111.0" layoutY="201.0" mnemonicParsing="false" onAction="#Reports" text="Reports">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            </children>
+        </Pane>
+        <TableView fx:id="CustomersTableView" layoutX="25.0" layoutY="396.0" prefHeight="240.0" prefWidth="558.0">
+            <columns>
+                <TableColumn fx:id="Ccustomer_ID" prefWidth="93.0" text="Customer_ID" />
+                <TableColumn fx:id="Customer_Name" prefWidth="99.0" text="Customer_Name" />
+                <TableColumn fx:id="Address" prefWidth="93.0" text="Address" />
+                <TableColumn fx:id="Postal_Code" prefWidth="90.0" text="Postal_Code" />
+                <TableColumn fx:id="Phone" prefWidth="93.0" text="Phone" />
+                <TableColumn fx:id="Division_ID" prefWidth="90.0" text="Division_ID" />
+            </columns>
+        </TableView>
+        <TableView fx:id="AppointmentsTableView" layoutX="14.0" layoutY="29.0" prefHeight="334.0" prefWidth="880.0">
+            <columns>
+                <TableColumn fx:id="Appointment_ID" prefWidth="98.0" text="Appointment_ID" />
+                <TableColumn fx:id="AppointmentTitle" prefWidth="78.0" text="Title" />
+                <TableColumn fx:id="Description" prefWidth="88.0" text="Description" />
+                <TableColumn fx:id="Location" prefWidth="88.0" text="Location" />
+                <TableColumn fx:id="Type" prefWidth="88.0" text="Type" />
+            <TableColumn fx:id="Start" prefWidth="88.0" text="Start" />
+                <TableColumn fx:id="End" prefWidth="88.0" text="End" />
+                <TableColumn fx:id="Customer_ID" prefWidth="88.0" text="Customer_ID" />
+            <TableColumn fx:id="User_ID" prefWidth="88.0" text="User_ID" />
+            <TableColumn fx:id="Contact_ID" prefWidth="88.0" text="Contact_ID" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
